@@ -3,20 +3,19 @@ package com.appium.repl;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
@@ -40,7 +39,11 @@ public class DriverMobileCommand {
                 + "/appium_server_logs" + dtf.format(now) + ".txt")).usingAnyFreePort()
             .build();
         service.start();
-        return driver = new AndroidDriver<>(service.getUrl(), setCapabilities(path));
+        if (setCapabilities(path).getCapability("deviceName").equals("android")) {
+            return driver = new AndroidDriver<>(service.getUrl(), setCapabilities(path));
+        } else {
+            return driver = new IOSDriver<>(service.getUrl(), setCapabilities(path));
+        }
     }
 
     public void stopServer() {

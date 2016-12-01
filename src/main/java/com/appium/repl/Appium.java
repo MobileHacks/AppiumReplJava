@@ -1,5 +1,6 @@
 package com.appium.repl;
 
+import io.appium.java_client.AppiumDriver;
 import javarepl.Main;
 
 /**
