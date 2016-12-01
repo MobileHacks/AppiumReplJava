@@ -1,6 +1,17 @@
+
 .idea/
 AppiumJavaRepl.iml
 appium_server_logs2016_12_01_22:02:25.txt
 appium_server_logs2016_12_01_22:03:50.txt
 dependency-reduced-pom.xml
 target/
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
