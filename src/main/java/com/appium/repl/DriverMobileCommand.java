@@ -10,6 +10,7 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -43,6 +44,7 @@ public class DriverMobileCommand {
             return driver = new AndroidDriver<>(service.getUrl(), setCapabilities(path));
         } else {
             return driver = new IOSDriver<>(service.getUrl(), setCapabilities(path));
+
         }
     }
 

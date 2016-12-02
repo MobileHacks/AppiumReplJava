@@ -3,6 +3,8 @@ package com.appium.repl;
 import io.appium.java_client.AppiumDriver;
 import javarepl.Main;
 
+import java.lang.reflect.Method;
+
 /**
  * Created by saikrisv on 2016/11/30.
  */
@@ -21,11 +23,22 @@ public class Appium {
     }
 
     private static void welcome() {
-        console("----------------------------");
+        console("-----------------------------------------------------------");
         console(" :::- Appium Java REPL -::: " + SEPARATOR);
-        console("-----------------------------" + SEPARATOR);
+        console("Enter import static com.appium.repl.Appium.*; " + SEPARATOR);
+        console("Enter import io.appium.java_client.*; " + SEPARATOR);
+        console("Enter AppiumDriver driver = driver.start(path_to_json_file in quotes)" + SEPARATOR);
+        console("Type help() to get all appium commands");
+        console("-----------------------------------------------------------" + SEPARATOR);
     }
     public static void console(final String msg) {
         System.out.println(msg);
+    }
+
+    public static void help(){
+        Class c = AppiumDriver.class;
+        for (Method m : c.getDeclaredMethods()) {
+            System.err.println(m.getName());
+        }
     }
 }
