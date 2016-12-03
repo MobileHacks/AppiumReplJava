@@ -10,16 +10,8 @@
 
     <repositories>
         <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-        <repository>
-            <id>albertlatacz.published</id>
-            <url>http://albertlatacz.published.s3.amazonaws.com/repo</url>
-        </repository>
-        <repository>
-            <id>oss.sonatype.org</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <id>bodar</id>
+            <url>http://repo.bodar.com</url>
         </repository>
     </repositories>
 
@@ -31,9 +23,9 @@
         </dependency>
 
         <dependency>
-            <groupId>javarepl</groupId>
+            <groupId>com.javarepl</groupId>
             <artifactId>javarepl</artifactId>
-            <version>350</version>
+            <version>414</version>
         </dependency>
 
         <dependency>
