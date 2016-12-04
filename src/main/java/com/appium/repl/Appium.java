@@ -27,7 +27,7 @@ public class Appium {
         console(" :::- Appium Java REPL -::: " + SEPARATOR);
         console("Enter import static com.appium.repl.Appium.*; " + SEPARATOR);
         console("Enter import io.appium.java_client.*; " + SEPARATOR);
-        console("Enter AppiumDriver driver = driver.start(path_to_json_file in quotes)" + SEPARATOR);
+        console("Enter AppiumDriver<MobileElement> driver = driver.start(path_to_json_file in quotes,appiumserverhost,appiumserverport)" + SEPARATOR);
         console("Type help() to get all appium commands");
         console("-----------------------------------------------------------" + SEPARATOR);
     }

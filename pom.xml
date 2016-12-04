@@ -13,6 +13,14 @@
             <id>bodar</id>
             <url>http://repo.bodar.com</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>oss.sonatype.org</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -32,13 +40,6 @@
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
             <version>1.6.1</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.github.vidstige</groupId>
-            <artifactId>jadb</artifactId>
-            <version>94ebf38</version>
         </dependency>
 
         <dependency>
