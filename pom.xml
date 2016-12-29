@@ -33,7 +33,7 @@
         <dependency>
             <groupId>com.javarepl</groupId>
             <artifactId>javarepl</artifactId>
-            <version>414</version>
+            <version>422</version>
         </dependency>
 
         <dependency>
